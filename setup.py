@@ -30,7 +30,8 @@ tests_require = [
 
 setup(
     name='django-haystack',
-    use_scm_version=True,
+    #use_scm_version=True,
+    version="2.8.1.dev0",
     description='Pluggable search for Django.',
     author='Daniel Lindsley',
     author_email='daniel@toastdriven.com',
