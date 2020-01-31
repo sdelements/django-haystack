@@ -179,7 +179,7 @@ class WhooshSearchBackend(BaseSearchBackend):
 
         self.index = self.index.refresh()
         max_retries = getattr(settings, 'HAYSTACK_WHOOSH_WRITER_ACQUIRE_MAX_RETRIES', 0)
-        delay = max_retries = getattr(settings, 'HAYSTACK_WHOOSH_WRITER_ACQUIRE_DELAY', 0.25)
+        delay = getattr(settings, 'HAYSTACK_WHOOSH_WRITER_ACQUIRE_DELAY', 0.25)
         writer = AsyncWriter(self.index, delay=delay, max_retries=max_retries)
 
         for obj in iterable:
